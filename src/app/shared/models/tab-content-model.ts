@@ -1,4 +1,4 @@
 export class TabContentModel {
-  thumbnail: string;
+  formattedUrl: string;
   title: string;
 }

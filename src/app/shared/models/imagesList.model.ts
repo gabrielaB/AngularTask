@@ -1,5 +1,5 @@
-import {TabContentModel} from './tab-content-model';
+import {ImageModel} from './image.model';
 
 export class ImagesListModel {
-  items: TabContentModel[];
+  items: ImageModel[];
 }

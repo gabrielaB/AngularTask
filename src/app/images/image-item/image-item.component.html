@@ -1,0 +1,27 @@
+<div class="col col-xs-12 col-md-7">
+  <div class="card text-center">
+    <p class="card-header">{{image.title}}</p>
+    <div class="card-body">
+      <img (click)="enlargeImg(image.pagemap.cse_thumbnail[0].src)" class="img img-thumbnail" alt="image"
+           src="{{ image.pagemap.cse_thumbnail[0].src }}">
+    </div>
+  </div>
+</div>
+<div class="modal fade 0" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+          class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+      </div>
+      <div class="modal-body">
+        <img [src]="large" id="imagepreview">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

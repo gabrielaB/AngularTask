@@ -8,7 +8,8 @@ declare var $: any;
 })
 export class ImageItemComponent {
   @Input() image: any;
- constructor(public large:string) {}
+  large: any;
+ constructor() {}
 
   enlargeImg(image) {
     this.large = image;

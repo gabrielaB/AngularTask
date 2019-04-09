@@ -12,6 +12,7 @@ import {VideoListComponent} from './videos/video-list/video-list.component';
 import {VideosComponent} from './videos/videos/videos.component';
 import {VideoItemComponent} from './videos/video-item/video-item.component';
 import {FormsModule} from '@angular/forms';
+import {YoutubeService} from './shared/services/youtube-service.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import {FormsModule} from '@angular/forms';
   ],
   providers: [
     GoogleSearchService,
-
+    YoutubeService
   ],
   bootstrap: [AppComponent]
 })

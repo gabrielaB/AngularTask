@@ -1,0 +1,21 @@
+a{
+  border:1px solid;
+}
+ul li:last-child a{
+  border: none;
+}
+button{
+  color: black;
+  margin-left: 10px;
+}
+input{
+  margin-left: 16px;
+  margin-top: 20px;
+  border: 1px solid blue;
+  border-radius: 4px;
+  width: 225px;
+  padding: 10px;
+  height: 40px;
+}
+
+

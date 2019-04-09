@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import {Component, OnInit, EventEmitter, Output} from '@angular/core';
 import {VideoModel} from '../../shared/models/video.model';
 import {YoutubeService} from '../../shared/services/youtube-service.service';
 import {DomSanitizer} from '@angular/platform-browser';
@@ -10,32 +10,23 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class VideosComponent implements OnInit {
   videos: VideoModel[];
 
-  constructor(private youtubeService: YoutubeService,
-              private sanitizer: DomSanitizer) {
+  constructor(private youtubeService: YoutubeService) {
   }
 
 
   ngOnInit() {
-    this.loadAllVideos()
-
+    this.loadAllVideos();
   }
 
-  update(event){
-    this.loadAllVideos(event.target.value)
-}
+  update(event) {
+    this.loadAllVideos(event.target.value);
+  }
 
-  loadAllVideos(query = ''){
+  loadAllVideos(query = '') {
     this.youtubeService.getAllVideosResults(query)
       .subscribe(res => {
-        this.videos = res.items
-        console.log(res)
-        for(let v of res.items){
-          v['safeUrl']=this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/watch?v=${v.id.videoId}`)
-          console.log(v)
-        }
-      })
+        this.videos = res.items;
+      });
   }
-  updateVideoUrl(){
 
-  }
 }

@@ -7,10 +7,8 @@ import {ImageModel} from '../../shared/models/image.model';
   templateUrl: './image-list.component.html'
 })
 export class ImageListComponent implements OnInit {
-  @Input() images:ImageModel[];
+  @Input() images: ImageModel[];
 
   ngOnInit() {
   }
-
-
 }

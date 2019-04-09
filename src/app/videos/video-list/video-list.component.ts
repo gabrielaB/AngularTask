@@ -1,4 +1,4 @@
-import {Component, OnInit,Input} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {VideoModel} from '../../shared/models/video.model';
 
 @Component({
@@ -6,10 +6,9 @@ import {VideoModel} from '../../shared/models/video.model';
   templateUrl: './video-list.component.html'
 })
 export class VideoListComponent implements OnInit {
-  @Input() videos:VideoModel[];
+  @Input() videos: VideoModel[];
 
-  constructor(
-    ) {
+  constructor() {
   }
 
   ngOnInit() {

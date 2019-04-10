@@ -1,29 +1,31 @@
 <nav class="nav nav-tabs">
   <div class="container-fluid">
     <ul class="nav nav-pills" id="tabs-list">
-        <li>
-          <a href="#" (click)="onSelect('images')">
-            Images
-            <button type="button" class="close" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </a>
-        </li>
-        <li>
-          <a href="#" (click)="onSelect('videos')">
-            Videos
-            <button type="button" class="close" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </a>
-        </li>
       <li>
-        <a href="#" (click)="attachComponent('New Tab')">
-            <span class="glyphicon glyphicon-plus"></span>
+        <a href="#" (click)="onSelect('images')">
+          Images
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </a>
       </li>
-      </ul>
-    </div>
+      <li>
+        <a href="#" (click)="onSelect('videos')">
+          Videos
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav nav-pills">
+      <li>
+        <a href="#" (click)="attachComponent('New Tab')">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 

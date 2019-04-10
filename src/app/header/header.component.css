@@ -1,6 +1,9 @@
 a{
   border:1px solid;
 }
+ul{
+  display: inline-block;
+}
 ul li:last-child a{
   border: none;
 }

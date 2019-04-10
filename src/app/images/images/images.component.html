@@ -1,6 +1,7 @@
-
+<app-search (inputSearch)="loadImageResults($event)"></app-search>
 <div class="row">
   <div class="col-md-5">
-    <app-image-list [images]="images" (inputSearch)="load()"></app-image-list>
+    <app-image-list [images]="images"></app-image-list>
   </div>
 </div>
+

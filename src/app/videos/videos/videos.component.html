@@ -1,5 +1,4 @@
-
-<input type="text" (keypress)="update($event)" name="search"/>
+<app-search (inputSearch)="loadImageResults($event)"></app-search>
 <div class="row">
   <div class="col-md-5">
     <app-video-list [videos]="videos"></app-video-list>

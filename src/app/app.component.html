@@ -1,12 +1,12 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<app-header (featureSelected)="onNavigate($event)" (createComponent)="createTab(tab)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
      <app-images *ngIf="loadedFeature === 'images'"></app-images>
      <app-videos *ngIf="loadedFeature !== 'images'"></app-videos>
+      <ng-template #dynamic></ng-template>
     </div>
   </div>
 </div>
-
 
 

@@ -1,19 +1,21 @@
-import {Component, OnInit, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ImageModel} from '../../shared/models/image.model';
 import {GoogleSearchService} from '../../shared/services/google-search-service.service';
+declare var $: any;
 
 @Component({
-  selector: 'app-images',
-  templateUrl: './images.component.html',
-  styleUrls: ['./images.component.css']
+  selector: 'app-container',
+  templateUrl: './content-container.component.html',
 })
-export class ImagesComponent implements OnInit {
+export class ContentContainerComponent implements OnInit{
+  @Output() inputSearch = new EventEmitter<string>();
   images: ImageModel[];
 
-  constructor(private searchService: GoogleSearchService) {
-  }
+  constructor(private searchService: GoogleSearchService){
 
-  ngOnInit() {
+  }
+  ngOnInit(): void {
+
   }
 
   loadImageResults(event) {
@@ -24,4 +26,5 @@ export class ImagesComponent implements OnInit {
         this.images = res.items;
       });
   }
+
 }

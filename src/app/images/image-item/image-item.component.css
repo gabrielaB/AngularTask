@@ -3,5 +3,8 @@ img#imagepreview
   width: 400px;
   height: 400px;
 }
+.card-header{
+  margin-top: 50px;
+}
 
 

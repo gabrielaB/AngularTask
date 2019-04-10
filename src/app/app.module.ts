@@ -13,6 +13,11 @@ import {VideosComponent} from './videos/videos/videos.component';
 import {VideoItemComponent} from './videos/video-item/video-item.component';
 import {FormsModule} from '@angular/forms';
 import {YoutubeService} from './shared/services/youtube-service.service';
+import {SearchComponent} from './search/search.component';
+import {DynamicContentComponent} from './dynamic/dynamic-content/dynamic-content.component';
+import {DynamicContentService} from './shared/services/dynamic-content-service.service';
+import {ContentContainerComponent} from './dynamic/dynamic-container/content-container.component';
+import {DynamicItemComponent} from './dynamic/dynamic-item/dynamic-item.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,11 @@ import {YoutubeService} from './shared/services/youtube-service.service';
     ImagesComponent,
     VideoListComponent,
     VideosComponent,
-    VideoItemComponent
+    VideoItemComponent,
+    SearchComponent,
+    DynamicContentComponent,
+    ContentContainerComponent,
+    DynamicItemComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +42,10 @@ import {YoutubeService} from './shared/services/youtube-service.service';
   ],
   providers: [
     GoogleSearchService,
-    YoutubeService
+    YoutubeService,
+    DynamicContentService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DynamicContentComponent]
 })
 export class AppModule { }

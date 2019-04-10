@@ -1,12 +1,7 @@
 
 <div class="card text-center">
-    <h4 class="card-header">{{video.snippet.title}}</h4>
-    <div class="card-body">
-      <iframe [src]="getEmbedUrl(video)"></iframe>
-      <!--<source src="{{'https://www.youtube.com/embed/' + video.id.videoId}}" >-->
-
-
-      <!--<img (click)="enlargeImg(image.snippet.th"umbnails.default.url)" class="img img-thumbnail" alt="image"-->
-           <!--src="{{ video.snippet.thumbnails.default.url }}">-->
-    </div>
+  <h4 class="card-header">{{video.snippet.title}}</h4>
+  <div class="card-body">
+    <iframe [src]="getEmbedUrl(video)"></iframe>
+  </div>
 </div>

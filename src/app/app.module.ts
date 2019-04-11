@@ -17,7 +17,7 @@ import {SearchComponent} from './search/search.component';
 import {DynamicContentComponent} from './dynamic/dynamic-content/dynamic-content.component';
 import {DynamicContentService} from './shared/services/dynamic-content-service.service';
 import {ContentContainerComponent} from './dynamic/dynamic-container/content-container.component';
-import {DynamicItemComponent} from './dynamic/dynamic-item/dynamic-item.component';
+import {DynamicItemComponent} from './dynamic-item/dynamic-item.component';
 
 @NgModule({
   declarations: [

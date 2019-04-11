@@ -10,29 +10,43 @@ import {DynamicContentComponent} from './dynamic/dynamic-content/dynamic-content
 })
 export class AppComponent implements OnInit {
   loadedFeature = 'images';
-  service:DynamicContentService;
+  service: DynamicContentService;
   componentRef: any;
   @ViewChild('dynamic', {read: ViewContainerRef}) entry: ViewContainerRef;
   @ViewChild('tabs') tabs;
+
   constructor(@Inject(DynamicContentService) service, private resolver: ComponentFactoryResolver) {
-    this.service = service
-   }
+    this.service = service;
+  }
 
   ngOnInit() {
   }
 
   onNavigate(feature: string) {
-    console.log('feature')
+    console.log('feature');
     this.loadedFeature = feature;
   }
 
-  createTab(tab){
-    const ul =document.getElementById('tabs-list')
-    const li = document.createElement("li");
-    // $(`${li}`).addClass()
-    li.appendChild(document.createTextNode("Four"));
+  createTab(tab) {
+    const ul = document.getElementById('tabs-list');
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    const btn = document.createElement('button');
+    const span = document.createElement('span');
+
+    a.classList.add('tabs-links');
+    btn.classList.add('close');
+    span.innerHTML = '&times;';
+    btn.appendChild(span);
+    btn.classList.add('close');
+    const textnode = document.createTextNode('New tab');
+    a.appendChild(textnode);
+    a.appendChild(btn);
+    li.appendChild(a);
     ul.appendChild(li);
-     const factory = this.resolver.resolveComponentFactory(DynamicContentComponent);
-     this.componentRef = this.entry.createComponent(factory);
+    const factory = this.resolver.resolveComponentFactory(DynamicContentComponent);
+    this.componentRef = this.entry.createComponent(factory);
   }
 }
+
+

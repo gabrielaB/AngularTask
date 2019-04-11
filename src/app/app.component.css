@@ -1,1 +1,7 @@
-
+.tabs-links{
+  /*border:1px solid;*/
+}
+.close{
+  color: black;
+  margin-left: 10px;
+}

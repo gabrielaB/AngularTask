@@ -1,13 +1,13 @@
-a{
-  border:1px solid;
-}
+/*.tabs-links{*/
+  /*border:1px solid;*/
+/*}*/
 ul{
   display: inline-block;
 }
 ul li:last-child a{
   border: none;
 }
-button{
+.close{
   color: black;
   margin-left: 10px;
 }

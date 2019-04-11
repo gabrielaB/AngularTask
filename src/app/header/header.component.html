@@ -2,15 +2,15 @@
   <div class="container-fluid">
     <ul class="nav nav-pills" id="tabs-list">
       <li>
-        <a href="#" (click)="onSelect('images')">
+        <a class="tabs-links" href="#" (click)="onSelect('images')">
           Images
-          <button type="button" class="close" aria-label="Close">
+          <button   type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </a>
       </li>
       <li>
-        <a href="#" (click)="onSelect('videos')">
+        <a class="tabs-links" href="#" (click)="onSelect('videos')">
           Videos
           <button type="button" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -20,7 +20,7 @@
     </ul>
     <ul class="nav nav-pills">
       <li>
-        <a href="#" (click)="attachComponent('New Tab')">
+        <a class="tabs-links" href="#" (click)="attachComponent('New Tab')">
           <span class="glyphicon glyphicon-plus"></span>
         </a>
       </li>

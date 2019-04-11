@@ -7,6 +7,7 @@ import {GoogleSearchService} from '../../shared/services/google-search-service.s
   templateUrl: './images.component.html',
   styleUrls: ['./images.component.css']
 })
+
 export class ImagesComponent implements OnInit {
   images: ImageModel[];
 

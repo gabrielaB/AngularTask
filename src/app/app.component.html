@@ -1,12 +1,65 @@
-<app-header (featureSelected)="onNavigate($event)" (createComponent)="createTab(tab)"></app-header>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-     <app-images *ngIf="loadedFeature === 'images'"></app-images>
-     <app-videos *ngIf="loadedFeature !== 'images'"></app-videos>
-      <ng-template #dynamic></ng-template>
-    </div>
+<!--<app-header (featureSelected)="onNavigate($event)"-->
+            <!--(createComponent)="createTab()"-->
+            <!--[dynamicTabs]="tabs"-->
+<!--&gt;</app-header>-->
+<!--<div class="container">-->
+  <!--<div class="row">-->
+    <!--<div class="col-md-12">-->
+     <!--<app-images *ngIf="loadedFeature === 'images'"></app-images>-->
+     <!--<app-videos *ngIf="loadedFeature !== 'images'"></app-videos>-->
+      <!--<ng-template #dynamic></ng-template>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<nav class="nav nav-tabs">
+  <div class="container-fluid">
+    <ul class="nav nav-pills" id="tabs-list">
+      <li>
+        <a class="tabs-links" href="#" (click)="onSelect('images')">
+          Images
+          <button   type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </a>
+      </li>
+      <li>
+        <a class="tabs-links" href="#" (click)="onSelect('videos')">
+          Videos
+          <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </a>
+      </li>
+      <li *ngFor="let tab of dynamicTabs">
+        <a class="tabs-links" href="#">
+         {{tab.title}}
+          <button type="button" class="close" aria-label="Close" (click)="closeTab(tab)">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </a>
+      </li>
+    </ul>
+    <ul class="nav nav-pills">
+      <li>
+        <a class="tabs-links" href="#" (click)="createTab('New tab')">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </li>
+    </ul>
   </div>
+</nav>
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<app-images *ngIf="loadedFeature === 'images'"></app-images>
+<app-videos *ngIf="loadedFeature !== 'images'"></app-videos>
+<ng-template #dynamic></ng-template>
 </div>
+</div>
+</div>
+
+
 
 

@@ -4,12 +4,10 @@ import {
   Inject
 } from '@angular/core'
 import {DynamicContentComponent} from '../../dynamic/dynamic-content/dynamic-content.component';
-import {ContentContainerComponent} from '../../dynamic/dynamic-container/content-container.component';
 
 
 @Injectable()
 export class DynamicContentService {
-
   factoryResolver: any;
   rootViewContainer: any;
 
@@ -28,3 +26,4 @@ export class DynamicContentService {
     this.rootViewContainer.insert(component.hostView)
   }
 }
+

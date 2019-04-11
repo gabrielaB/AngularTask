@@ -32,7 +32,7 @@ import {DynamicItemComponent} from './dynamic-item/dynamic-item.component';
     SearchComponent,
     DynamicContentComponent,
     ContentContainerComponent,
-    DynamicItemComponent
+    DynamicItemComponent,
   ],
   imports: [
     BrowserModule,
